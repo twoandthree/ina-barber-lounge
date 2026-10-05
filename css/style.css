@@ -740,3 +740,29 @@ body {
   color: var(--text-muted);
 }
 
+.map-section {
+  padding: 40px 20px;
+}
+
+.barber-map-card {
+  position: relative;
+  min-height: 200px !important;
+  width: 100%;
+  max-width: 800px; /* Matches your .barber-card max-width */
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 28px; /* Matches your card corners */
+  
+  /* Tight neon blue glow matching your cards */
+  box-shadow: 
+    0px 0px 15px 6px rgba(0, 102, 255, 0.5),
+    0 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.barber-map-card iframe {
+  border-radius: 28px; /* Ensures map corners don't poke out of the glass frame */
+}
