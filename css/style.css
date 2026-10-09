@@ -41,26 +41,30 @@ p,
 
 
 /* ==========================================================================
-   2. GLOBAL RESET & NEUMORPHIC PALETTE
+   2. GLOBAL RESET & NEUMORPHIC PALETTE (INA RED & BLACK)
    ========================================================================== */
 :root {
-  --bg-jet-black: #171717;
-  --surface-dark: #0d0d0d;
+  --bg-jet-black: #121212;
+  --surface-dark: #0a0a0a;
   --text-main: #ffffff;
   --text-muted: #a1a1aa;
   
+  /* Brand Red Accent */
+  --brand-red: #dc2626;
+  --brand-red-glow: rgba(220, 38, 38, 0.6);
+  
   /* Glassmorphism settings */
-  --glass-bg: rgba(18, 18, 18, 0.8);
+  --glass-bg: rgba(18, 18, 18, 0.85);
   --glass-border: rgba(255, 255, 255, 0.1);
   
   /* Neumorphic Dark Shadows */
   --neu-shadow-outer: 
-    -5px -5px 15px rgba(255, 255, 255, 0.05),
-    8px 8px 20px rgba(0, 0, 0, 0.9);
+    -5px -5px 15px rgba(255, 255, 255, 0.03),
+    8px 8px 20px rgba(0, 0, 0, 0.95);
     
   --neu-shadow-inset: 
-    inset 2px 2px 5px rgba(0, 0, 0, 0.9), 
-    inset -2px -2px 5px rgba(255, 255, 255, 0.05);
+    inset 2px 2px 5px rgba(0, 0, 0, 0.95), 
+    inset -2px -2px 5px rgba(255, 255, 255, 0.03);
 }
 
 * {
@@ -70,12 +74,12 @@ p,
 }
 
 body {
-  background-color: var(--bg-jet-black);
-  color: var(--text-main);
+  background-color: #f8fafc; /* Clean, modern off-white page background */
+  color: #111111;            /* Default text switches to dark for readability */
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   min-height: 100vh;
   line-height: 1.6;
-  overflow-x: hidden; /* Prevents unwanted horizontal scrolling on mobile */
+  overflow-x: hidden;
 }
 
 
@@ -90,8 +94,8 @@ body {
   background: var(--glass-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(0, 51, 255, 0.8);
-  box-shadow: 0 4px 20px rgba(0, 162, 255, 0.35);
+  border-bottom: 1px solid rgba(220, 38, 38, 0.5);
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.25);
   padding: 0.75rem 0.75rem; /* Compact mobile padding */
 }
 
@@ -149,8 +153,8 @@ body {
 
 .btn-book:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.08), 
+  border-color: rgba(220, 38, 38, 0.4);
+  box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.05), 
               10px 10px 25px rgba(0, 0, 0, 0.95);
 }
 
@@ -158,8 +162,6 @@ body {
   transform: translateY(0);
   box-shadow: var(--neu-shadow-inset);
 }
-
-/*=========*/
 
 .btn-call {
   background: var(--surface-dark);
@@ -177,8 +179,8 @@ body {
 
 .btn-call:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.08), 
+  border-color: rgba(220, 38, 38, 0.4);
+  box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.05), 
               10px 10px 25px rgba(0, 0, 0, 0.95);
 }
 
@@ -186,7 +188,6 @@ body {
   transform: translateY(0);
   box-shadow: var(--neu-shadow-inset);
 }
-
 
 /* Contact Hyperlinks Styling */
 .contact-link {
@@ -198,7 +199,7 @@ body {
 
 .contact-link:hover,
 .contact-link:focus {
-  color: #0066ff; /* Matches your brand blue accent */
+  color: var(--brand-red);
   text-decoration: underline;
 }
 
@@ -216,22 +217,21 @@ body {
   padding: 3rem 1.25rem;
   text-align: center;
   
-  /* Background Image Setup */
+  /* Background Image Setup with Red/Black Gradient tint */
   background: 
     linear-gradient(
       to bottom, 
-      rgba(23, 23, 23, 0.75) 0%, 
-      rgba(23, 23, 23, 0.88) 70%,
-      rgba(23, 23, 23, 1) 100%
+      rgba(18, 18, 18, 0.75) 0%, 
+      rgba(18, 18, 18, 0.88) 70%,
+      rgba(18, 18, 18, 1) 100%
     ),
-    url('../assets/images/barbers/La-Barberia-wideshot.JPEG') no-repeat center center / cover;
-  border-bottom: 1px solid rgba(0, 102, 255, 0.25);
+    url('../assets/images/ina-barber-lounge-hero.webp') no-repeat center center / cover;
+  border-bottom: 1px solid rgba(220, 38, 38, 0.3);
 }
 
-/* Add breathing room between paragraphs and the location/phone info */
 .hero-section p, 
 .hero-intro p {
-  margin-bottom: 1.5rem; /* Adjust this value (e.g., 1.5rem or 2rem) for more or less space */
+  margin-bottom: 1.5rem;
 }
 
 /* ==========================================================================
@@ -240,10 +240,10 @@ body {
 .hero-hours {
   margin-top: 1.25rem;
   padding: 1rem 1.25rem;
-  background: rgba(13, 13, 13, 0.75);
+  background: rgba(10, 10, 10, 0.45);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   max-width: 380px;
   margin-left: auto;
@@ -255,7 +255,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #0066ff;
+  color: var(--brand-red);
   margin-bottom: 0.5rem;
 }
 
@@ -283,12 +283,9 @@ body {
 }
 
 .location-info a:hover {
-  color: #0066ff;
+  color: var(--brand-red);
 }
 
-/* ==========================================================================
-   MINIMAL FOOTER
-   ========================================================================== */
 .site-footer {
   width: 100%;
   padding: 1.5rem 1rem;
@@ -321,59 +318,38 @@ body {
 /* ==========================================================================
    5. SECTION & CARD LAYOUT
    ========================================================================== */
-
-/* Outer Section Container for all stacked cards */
 .barbers-section {
   max-width: 800px;
   margin: 2rem auto 3rem auto;
+  background-color: #ffffff;
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Strictly centers cards horizontally */
+  align-items: center;
   gap: 2.5rem;
+  
 }
 
-/* Base Mobile Card (Vertical Stack: Image Top, Info Bottom) */
 .barber-card {
   position: relative;
   width: 100%;
-  max-width: 360px; /* Fluid scaling up to 360px on mobile */
+  max-width: 360px;
   margin: 0 auto;
   padding: 0;
   overflow: hidden;
-  background: var(--glass-bg);
+  background: rgb(0, 0, 0);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
   border-radius: 28px;
   text-align: center;
   
-  /* Tight neon blue glow */
+  /* Signature Red Glow */
   box-shadow: 
-    0px 0px 15px 6px rgba(0, 102, 255, 0.5),
+    0px 0px 15px 6px var(--brand-red-glow),
     0 5px 10px rgba(0, 0, 0, 0.7);
 }
 
-
-/* Background Hexagon Pattern 
-.card-bg-hex {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background: url('../assets/images/hexagon-pattern-centered.png') no-repeat center / contain;
-  opacity: 0.18;
-  transform: rotate(25deg) scale(1.1);
-  filter: blur(2px);
-  pointer-events: none;
-  z-index: 0;
-  transform: rotate(80deg);
-}
-*/
-
-/* Image Container */
 .barber-card-media {
   width: 100%;
   height: 280px;
@@ -389,7 +365,6 @@ body {
   object-position: center 10%;
 }
 
-/* Text Content Area */
 .barber-card-content {
   position: relative;
   z-index: 2;
@@ -407,7 +382,6 @@ body {
   font-style: normal;
   margin: 0;
   color: #ffffff;
-  
 }
 
 .barber-handle {
@@ -418,130 +392,28 @@ body {
   margin: 0;
 }
 
-/* Booksy CTA Button */
+/* Bold Red CTA Button */
 .book-btn {
   display: inline-block;
   margin-top: 0.4rem;
   padding: 0.75rem 1.6rem;
   font-size: 0.95rem;
-  background: #0066ff;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);
   color: #ffffff;
   font-weight: 700;
   text-decoration: none;
   border-radius: 50px;
-  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.575);
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.5);
   transition: transform 0.2s ease, background 0.2s ease;
   z-index: 5;
 }
 
 .book-btn:hover {
-  background: #257bff;
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 50%, #dc2626 100%);
   transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(239, 68, 68, 0.75);
 }
 
-/* Beauty Studio Card Theme (White background, gold & black text) */
-.barber-card.beauty-card {
-  background-color: #ffffff;
-  box-shadow: 0px 0px 15px 6px rgb(223, 173, 8); /* Soft gold and shadow glow */
-}
-
-.barbers-section .barber-card.beauty-card:hover {
-  box-shadow: 0px 0px 15px 6px rgba(255, 215, 96, 0.9) !important;
-}
-/* Text inside the beauty card */
-.beauty-card h2 {
-  color: #1a1a1a; /* Deep black for the title */
-  font-family: 'Sorts Mill Goudy', serif; /* Matching your typography style */
-}
-
-.beauty-card .instagram-handle,
-.beauty-card .instagram-handle:visited,
-.beauty-card .barber-handle,
-.beauty-card .barber-handle:visited {
-  color: #2c2c2c; /* Dark charcoal/black for readability */
-}
-
-.beauty-card .instagram-handle:hover,
-.beauty-card .barber-handle:hover {
-  color: #b8860b; /* Rich gold hover state */
-}
-
-/* Jewelry Gold Button for Beauty Card (Overrides Global Blue) */
-.beauty-card .book-btn {
-  background: linear-gradient(135deg, #f6e27a 0%, #d4af37 40%, #fff3b0 60%, #aa771c 100%) !important;
-  color: #111111 !important;
-  font-weight: 700;
-  border: 1px solid rgba(255, 223, 128, 0.9) !important;
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.6), 0 0 10px rgba(255, 215, 0, 0.3) !important;
-}
-
-/* Jewelry Gold Button Hover State */
-.beauty-card .book-btn:hover {
-  background: linear-gradient(135deg, #ffea8c 0%, #e2be42 40%, #fffae0 60%, #c69214 100%) !important;
-  color: #111111 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(255, 215, 0, 0.85), 0 0 15px rgba(255, 235, 150, 0.5) !important;
-}
-
-/* Force ONLY Jordana's beauty card image to a square 1:1 aspect ratio */
-.beauty-card .barber-card-media {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* Makes just this container square */
-  overflow: hidden;
-}
-
-.beauty-card .barber-card-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Crops the excess height gracefully */
-  object-position: center top; /* Keeps focus on her portrait */
-}
-
-/*===========*/
-/* La Oficina Repair Card Theme (Blue background, white text, red button) */
-.barber-card.oficina-card {
-  background-color: #1e3a8a; /* Rich repair shop blue background */
-  box-shadow: 0px 0px 15px 6px #ef4444a5;
-}
-
-/* Force outer card hover glow to coordinate with the red/blue theme */
-.barbers-section .barber-card.oficina-card:hover {
-  box-shadow: 0px 0px 15px 6px rgb(235, 80, 80) !important;
-}
-
-/* Text inside the oficina card */
-.oficina-card h2 {
-  color: #ffffff !important; /* Crisp white for headings */
-  font-family: 'Sorts Mill Goudy', serif;
-}
-
-.oficina-card .instagram-handle,
-.oficina-card .instagram-handle:visited,
-.oficina-card .barber-handle,
-.oficina-card .barber-handle:visited {
-  color: #e2e8f0; /* Soft off-white for readability */
-}
-
-.oficina-card .instagram-handle:hover,
-.oficina-card .barber-handle:hover {
-  color: #ef4444; /* Vibrant red hover state */
-}
-
-/* Striking Red Button for La Oficina (Overrides Global Defaults) */
-.oficina-card .book-btn {
-  background: linear-gradient(135deg, #ef4444 0%, rgb(220, 38, 38) 50%, #b91c1c 100%) !important;
-  color: #ffffff !important;
-  font-weight: 700;
-  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.5), 0 0 10px rgba(239, 68, 68, 0.3) !important;
-}
-
-/* Red Button Hover State */
-.oficina-card .book-btn:hover {
-  background: linear-gradient(135deg, rgb(248, 113, 113) 0%, #ef4444 50%, #dc2626 100%) !important;
-  color: #ffffff !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(239, 68, 68, 0.8), 0 0 15px rgba(254, 202, 202, 0.5) !important;
-}
 
 /* ==========================================================================
    6. DESKTOP / WIDE SCREEN RESPONSIVE BREAKPOINT (768px+)
@@ -564,11 +436,7 @@ body {
     font-size: 0.95rem;
   }
 
-  .btn-book {
-    padding: 0.7rem 1.5rem;
-    font-size: 0.9rem;
-  }
-
+  .btn-book,
   .btn-call {
     padding: 0.7rem 1.5rem;
     font-size: 0.9rem;
@@ -582,18 +450,16 @@ body {
     padding: 0 1.5rem;
   }
 
-  /* Switch card to a 2-column Grid on desktop */
   .barber-card {
     max-width: 100%;
     display: grid;
-    grid-template-columns: 40% 1fr; /* 40% image, 60% text */
-    align-items: stretch;           /* Forces both columns to match height */
+    grid-template-columns: 40% 1fr;
+    align-items: stretch;
     text-align: left;
     min-height: 270px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
-  /* Left Half: Portrait Image */
   .barber-card-media {
     width: 100%;
     height: 100%;
@@ -609,11 +475,10 @@ body {
     display: block;
   }
 
-  /* Right Half: Details & Button (Now perfectly centered vertically) */
   .barber-card-content {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers name, handle, and button vertically */
+    justify-content: center;
     align-items: center;
     padding: 2rem 2.5rem;
     gap: 0.6rem;
@@ -632,7 +497,7 @@ body {
   .barber-card:hover {
     transform: translateY(-4px);
     box-shadow: 
-      0px 0px 22px 8px rgba(0, 102, 255, 0.75),
+      0px 0px 22px 8px rgba(220, 38, 38, 0.7),
       0 10px 20px rgba(0, 0, 0, 0.85);
   }
 
@@ -645,14 +510,14 @@ body {
     text-underline-offset: 4px;
     font-size: 0.95rem;
     margin-bottom: 1rem;
-    transition: color 0.2s ease, 0.2s ease;
+    transition: color 0.2s ease;
   }
 
   .barber-handle:hover {
-    color: #94a3b8;
-    text-decoration: underline;
+    color: var(--brand-red);
   }
 }
+
 /* ==========================================================================
    EXTRA SMALL MOBILE TARGETING (iPhone SE / 375px and below)
    ========================================================================== */
@@ -682,7 +547,7 @@ body {
 
 
 /* ==========================================================================
-   FOOTER STYLES
+   FOOTER & MAP STYLES
    ========================================================================== */
 .site-footer {
   width: 100%;
@@ -729,7 +594,7 @@ body {
 }
 
 .footer-details a:hover {
-  color: #0066ff;
+  color: var(--brand-red);
 }
 
 .footer-bottom {
@@ -748,21 +613,21 @@ body {
   position: relative;
   min-height: 200px !important;
   width: 100%;
-  max-width: 800px; /* Matches your .barber-card max-width */
+  max-width: 800px;
   margin: 0 auto;
   overflow: hidden;
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
-  border-radius: 28px; /* Matches your card corners */
+  border-radius: 28px;
   
-  /* Tight neon blue glow matching your cards */
+  /* Red Neon Glow for Map Frame */
   box-shadow: 
-    0px 0px 15px 6px rgba(0, 102, 255, 0.5),
+    0px 0px 15px 6px var(--brand-red-glow),
     0 5px 10px rgba(0, 0, 0, 0.7);
 }
 
 .barber-map-card iframe {
-  border-radius: 28px; /* Ensures map corners don't poke out of the glass frame */
+  border-radius: 28px;
 }
