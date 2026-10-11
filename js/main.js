@@ -1,48 +1,48 @@
 // Barber Data Source (Add, remove, or modify barbers here)
 const barbersData = [
   {
-    id: "sergio-castañeda",
-    name: "Sergio Castañeda",
-    handle: "https://instagram.com/barber_serg10",
-    displayHandle: "@barber_serg10",
-    image: "assets/images/barbers/Sergio.jpg",
-    booksyUrl: "tel:+15202783729"
+    id: "adrian",
+    name: "Adrian Andrew",
+    handle: "https://instagram.com/inabarberlounge",
+    displayHandle: "@inabarberlounge",
+    image: "assets/images/adrian-andrew.webp",
+    booksyUrl: "https://www.fresha.com/a/ina-barber-lounge-tucson-3701-west-ina-road-zcyfznmk/all-offer?menu=true&pId=828985&rwg_token=AE37R_jGQUV1cWFjjhIP-Zf0UKC5A-JwyKrlxwBn6qRLK0fC6cGjKKOaE3YmpzYmBW0Rl9XsIZDX96LnpYf6t97hJwMvdqcB7g=="
   },
 
   {
-    id: "jose-serna",
-    name: "Jose Serna",
-    handle: "https://instagram.com/fadezbypollo",
-    displayHandle: "@fadezbypollo",
-    image: "assets/images/barbers/Jose.jpg",
-    booksyUrl: "tel:+15203891884"
+    id: "eric",
+    name: "Eric Moreno",
+    handle: "https://instagram.com/eriictrill",
+    displayHandle: "@eriictrill",
+    image: "assets/images/eric-moreno.webp",
+    booksyUrl: "https://www.fresha.com/a/ina-barber-lounge-tucson-3701-west-ina-road-zcyfznmk/all-offer?menu=true&pId=828985&rwg_token=AE37R_jGQUV1cWFjjhIP-Zf0UKC5A-JwyKrlxwBn6qRLK0fC6cGjKKOaE3YmpzYmBW0Rl9XsIZDX96LnpYf6t97hJwMvdqcB7g=="
   },
 
   {
-    id: "felix-salmon",
-    name: "Felix Salmon",
-    handle: "https://instagram.com/sapoblendz",
-    displayHandle: "@sapoblendz",
-    image: "assets/images/barbers/Felix.jpg",
-    booksyUrl: "http://sapoblendz97.booksy.com/a/"
+    id: "dominique",
+    name: "Dominique Lozano",
+    handle: "https://instagram.com/_dominique.the.barber_",
+    displayHandle: "@_dominique.the.barber_",
+    image: "assets/images/dominique-lozano.webp",
+    booksyUrl: "https://www.fresha.com/a/ina-barber-lounge-tucson-3701-west-ina-road-zcyfznmk/all-offer?menu=true&pId=828985&rwg_token=AE37R_jGQUV1cWFjjhIP-Zf0UKC5A-JwyKrlxwBn6qRLK0fC6cGjKKOaE3YmpzYmBW0Rl9XsIZDX96LnpYf6t97hJwMvdqcB7g=="
   },
 
   {
-    id: "edgar-armenta",
-    name: 'Edgar Armenta',
-    handle: "https://instagram.com/eacutz88",
-    displayHandle: "@eacutz88",
-    image: "assets/images/barbers/Edgar.jpg",
-    booksyUrl: "http://eacutz88.booksy.com/a/"
+    id: "cesar",
+    name: 'Cesar',
+    handle: "https://instagram.com/inabarberlounge",
+    displayHandle: "inabarberlounge",
+    image: "assets/images/cesar.webp",
+    booksyUrl: "https://www.fresha.com/a/ina-barber-lounge-tucson-3701-west-ina-road-zcyfznmk/all-offer?menu=true&pId=828985&rwg_token=AE37R_jGQUV1cWFjjhIP-Zf0UKC5A-JwyKrlxwBn6qRLK0fC6cGjKKOaE3YmpzYmBW0Rl9XsIZDX96LnpYf6t97hJwMvdqcB7g=="
   },
 
   {
-    id: "ashley-castañeda",
-    name: 'Ashley Castañeda',
-    handle: "https://instagram.com/ashblendz_",
-    displayHandle: "@ashblendz_",
-    image: "assets/images/barbers/Ashley.jpg",
-    booksyUrl: "http://ashblendz60.booksy.com/a/"
+    id: "noah",
+    name: 'Noah Pallanes',
+    handle: "https://instagram.com/swayxblendz",
+    displayHandle: "@swayxblendz",
+    image: "assets/images/noah-pallanes.webp",
+    booksyUrl: "https://www.fresha.com/a/ina-barber-lounge-tucson-3701-west-ina-road-zcyfznmk/all-offer?menu=true&pId=828985&rwg_token=AE37R_jGQUV1cWFjjhIP-Zf0UKC5A-JwyKrlxwBn6qRLK0fC6cGjKKOaE3YmpzYmBW0Rl9XsIZDX96LnpYf6t97hJwMvdqcB7g=="
   }
 ];
 
