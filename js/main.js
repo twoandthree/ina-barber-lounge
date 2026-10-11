@@ -29,9 +29,9 @@ const barbersData = [
 
   {
     id: "cesar",
-    name: 'Cesar',
-    handle: "https://instagram.com/inabarberlounge",
-    displayHandle: "inabarberlounge",
+    name: 'Cesar Montes',
+    handle: "https://instagram.com/cesarceefreshcutzz",
+    displayHandle: "cesarceefreshcutzz",
     image: "assets/images/cesar.webp",
     booksyUrl: "https://www.fresha.com/a/ina-barber-lounge-tucson-3701-west-ina-road-zcyfznmk/all-offer?menu=true&pId=828985&rwg_token=AE37R_jGQUV1cWFjjhIP-Zf0UKC5A-JwyKrlxwBn6qRLK0fC6cGjKKOaE3YmpzYmBW0Rl9XsIZDX96LnpYf6t97hJwMvdqcB7g=="
   },
